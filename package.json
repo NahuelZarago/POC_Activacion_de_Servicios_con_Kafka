@@ -1,0 +1,10 @@
+{
+  "name": "activation-poc-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently -n \"API,BILL,PROV,NOTIF,CRM,UI\" -c \"bgBlue.bold,bgMagenta.bold,bgYellow.bold,bgCyan.bold,bgGreen.bold,bgWhite.bold,black\" \"npm run start:dev --prefix apps/activation-api\" \"npm run start:dev --prefix apps/billing-service\" \"npm run start:dev --prefix apps/provisioning-service\" \"npm run start:dev --prefix apps/notification-service\" \"npm run start:dev --prefix apps/crm-analytics-service\" \"npm run dev --prefix apps/demo-ui\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
